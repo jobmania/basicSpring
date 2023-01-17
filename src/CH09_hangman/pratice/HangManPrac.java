@@ -1,6 +1,5 @@
-package CH09_hangman.CH09_hangman실습;
+package CH09_hangman.pratice;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class HangManPrac {

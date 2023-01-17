@@ -1,4 +1,4 @@
-package CH09_hangman;
+package CH09_hangman.example;
 
 public class App {
     public static void main(String[] args) {

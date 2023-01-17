@@ -1,4 +1,4 @@
-package CH09_hangman;
+package CH09_hangman.example;
 
 import java.util.Scanner;
 

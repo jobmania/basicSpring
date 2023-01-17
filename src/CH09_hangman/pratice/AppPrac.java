@@ -1,4 +1,4 @@
-package CH09_hangman.CH09_hangman실습;
+package CH09_hangman.pratice;
 
 public class AppPrac {
     public static void main(String[] args) {
