@@ -15,9 +15,9 @@ public class App {
         ArrayList<String> stringArrayList = new ArrayList<>();
 
         stringArrayList.add("엄");
+        stringArrayList.add("준");
         stringArrayList.add("엄");
-        stringArrayList.add("엄");
-        stringArrayList.add("엄");
+        stringArrayList.add("식");
 
 
     }
