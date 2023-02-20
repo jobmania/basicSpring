@@ -10,11 +10,11 @@ public class Client {
             System.out.println("연결 성공..");
 
             //             1. 클라이언트 => 소켓
-            String msg = " 보내는 메세지야 안녕하세요!";
+            String msg = " <<안녕하세요!>>";
             PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
             writer.println(msg);
-            writer.flush(); // 버퍼를 ㅣ비운다 ==> 전송!!
-            System.out.println(" 내가 안녕 하세요 보냈다고 !");
+            writer.flush(); // 버퍼를 비운다 ==> 전송!!
+
 
 //           2. 소켓 => 클라이언트
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));

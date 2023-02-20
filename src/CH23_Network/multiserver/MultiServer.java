@@ -36,6 +36,16 @@ public class MultiServer {
 
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            if (serverSocket!=null) {
+                try {
+                    serverSocket.close();
+                    System.out.println("[서버종료]");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    System.out.println("[서버소켓통신에러]");
+                }
+            }
         }
 
     }
