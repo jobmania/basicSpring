@@ -1,8 +1,6 @@
-package CH23_Network;
+package CH23_Network.socket;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -26,6 +24,12 @@ public class Server {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 String line = reader.readLine();
                 System.out.println("서버에서 받은 메시지 : " + line);
+
+                // 서버 => 소켓
+                PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+                writer.println("Server to Client"+line);
+                writer.flush(); // 버퍼를 비운다 ==> 전송!!
+
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
