@@ -65,7 +65,33 @@ class ReceiveThread extends Thread {
 
     @Override
     public void run() {
-        ///
+        /// 스레드 시작시 실제 실행코드
+        String name = "";
+
+        // 최초 1회 클라이언트 이름을 수신
+        try {
+            name = in.readLine();
+            System.out.println("["+name+" 연결 생성 ]");
+            sendAll("["+name +" ] 님이 들어왓음.");
+
+            while(in != null){
+                String inputMsg = in.readLine();
+                if("quit".equalsIgnoreCase(inputMsg)) break;//종료
+                sendAll(name + ">>" + inputMsg);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            // 스레드 종료 == 클라이언트 퇴실
+            list.remove(out); // 해당 스레드의 출력 객체를 제거...
+        }
+
+        try {
+            socket.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("["+name +" ] 님 연결종료..");
 
     }
 
