@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	 
+	 <!-- xml을 로딩할때 자동으로 객체가 생성 -->  
+	 <!-- id가 없으면 객체의 이름으로 가져올수 없다 -->                 
+	 <bean class="com.demo.beans.TestBean" /> 
+	 
+	 <!-- xml을 로딩할때 자동으로 객체가 생성 -->  
+	 <!-- id가 있으면 id 이름으로 객체를 가져올수 있다 --> 
+	 <!-- 기본적으로 한개의 유일한 객체를 생성(singleton) -->                
+	 <bean id="test1" class="com.demo.beans.TestBean" />   
+	 
+	 <!-- lazy-init : true 일때 xml로딩시 객체 생성하지 않는다. -->  
+	 <!-- getBean 메서드 호출시 객체가 생성되며 싱글턴으로 한개만 생성됨 -->                
+	 <bean id="test2" class="com.demo.beans.TestBean" lazy-init="true" />  
+	 
+	 <!-- scope: prototype 일때 xml로딩시 객체 생성하지 않는다. -->  
+	 <!-- getBean 메서드 호출시 새로운 객체를 생성해 반환한다. -->                
+	 <bean id="test3" class="com.demo.beans.TestBean" scope="prototype" />  
+</beans>

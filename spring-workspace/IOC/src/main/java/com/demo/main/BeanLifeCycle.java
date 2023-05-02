@@ -15,7 +15,7 @@ public class BeanLifeCycle {
 		log.info("시작");
 		// beans.xml 파일을 로딩한다.
 		ClassPathXmlApplicationContext ctx = 
-				new ClassPathXmlApplicationContext("com/demo/config/beanLifeCycle.xml");
+				new ClassPathXmlApplicationContext("config/beanLifeCycle.xml");
 		//xml에 정의된 bean 객체를 가져오기
 		TestBean1 t1 = ctx.getBean("t1", TestBean1.class);
 		System.out.printf("t1 : %s\n", t1);

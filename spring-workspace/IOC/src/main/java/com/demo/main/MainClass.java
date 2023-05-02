@@ -15,7 +15,7 @@ public class MainClass {
 		log.info("시작");
 		// beans.xml 파일을 로딩한다.
 		ClassPathXmlApplicationContext ctx = 
-				new ClassPathXmlApplicationContext("com/demo/config/beans.xml");
+				new ClassPathXmlApplicationContext("config/beans.xml");
 		//xml에 정의된 bean 객체를 가져오기
 		TestBean t1 = ctx.getBean("test1", TestBean.class);
 		System.out.printf("t1 : %s\n", t1);
