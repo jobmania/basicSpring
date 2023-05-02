@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="obj1" class="com.demo.beans.TestBean1" lazy-init="true" />
+
+	<!-- 생성자 매개변수 주입 -->
+	<bean id="obj2" class="com.demo.beans.TestBean1" lazy-init="true">
+		<constructor-arg value="100" type="int" />
+	</bean>
+
+	<bean id="obj3" class="com.demo.beans.TestBean1" lazy-init="true">
+		<constructor-arg value="100" type="int" />
+		<constructor-arg value="7.777" type="double" />
+		<constructor-arg value="안녕" type="java.lang.String" />
+	</bean>
+
+	<bean id="obj4" class="com.demo.beans.TestBean2" lazy-init="true">
+		<constructor-arg>
+			<bean class="com.demo.beans.DataBean" />
+		</constructor-arg>
+		<constructor-arg>
+			<bean class="com.demo.beans.DataBean" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="data_bean" class="com.demo.beans.DataBean"
+		scope="prototype" />
+
+	<bean id="obj5" class="com.demo.beans.TestBean2" lazy-init="true">
+		<constructor-arg ref="data_bean" />
+		<constructor-arg ref="data_bean" />
+	</bean>
+	
+	<!-- SET 메서드 주입방법 -->
+	<bean id="t1" class="com.demo.beans.TestBean">
+		<property name="data1" value="100" />
+		<property name="data2" value="11.11" />
+		<property name="data3" value="true" />
+		<property name="data4" value="안녕하세요" />
+		<property name="data5">
+			<bean class="com.demo.beans.DataBean" />
+		</property>
+		<property name="data6" ref="data_bean" />
+	</bean>
+
+</beans>
