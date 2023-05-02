@@ -4,6 +4,7 @@ package com.demo.config;
 import com.demo.beans.TestBean1;
 import com.demo.beans.TestBean2;
 import com.demo.beans.TestBean3;
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -30,7 +31,7 @@ public class BeanConfigClass {
     }
 
 
-    @Bean
+    @Bean(autowire = Autowire.BY_NAME)
     @Scope("prototype") // 프로토 타입을 설정 -> 불러올 때마다 새로운 객체 생성(싱글톤 x)
     public TestBean3 java3(){
         return new TestBean3();
