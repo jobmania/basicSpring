@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ffeee61-a800-444e-86c6-2d32ed888906" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/advisor/AdvisorClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/beans/TestBean1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/BeanConfigClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/main/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringJDBC/src/main/java/com/demo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +53,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/admin/IdeaProjects/java/spring-workspace/AOPJava/src/main/resources",
+    "last_opened_file_path": "C:/Users/admin/IdeaProjects/java/spring-workspace/AOPJava",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "bc82c082706c967f11d26a9c0525a0d7",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,6 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1683008264106</updated>
       <workItem from="1683008265306" duration="1043000" />
+      <workItem from="1683009345871" duration="1000000" />
+      <workItem from="1683072878126" duration="300000" />
     </task>
     <servers />
   </component>
