@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.demo.beans.DataBean;
 import com.demo.model.Dto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,6 +48,13 @@ public class TestController {
         mv.setViewName("test4");
 
         return mv;
+    }
+
+
+    @PostMapping("/test5")
+    public String test5(@ModelAttribute DataBean bean) {
+        // @ModelAttribute("test") 지정 가능, 없을 경우 클래스명의 첫글자가 소문자로 전환
+        return "test5";
     }
 
 }

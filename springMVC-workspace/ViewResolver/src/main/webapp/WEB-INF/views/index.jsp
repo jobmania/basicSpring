@@ -19,5 +19,10 @@
 	<a href='test3'>test3</a><br/>
 	<hr/>
 	<a href='test4'>test4</a><br/>
+	<form action='test5' method='post'>
+		data1 : <input type='text' name='data1'/><br/>
+		data2 : <input type='text' name='data2'/><br/>
+		<button type='submit'>확인</button>
+	</form>
 </body>
 </html>
