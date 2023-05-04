@@ -1,9 +1,11 @@
 package com.demo.controller;
 
+import com.demo.model.Dto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @Controller
 public class TestController {
@@ -53,8 +55,8 @@ public class TestController {
 
 	@GetMapping("/test4")
 	public String test4(@RequestParam int data1,
-						@RequestParam int data2,
-						@RequestParam int [] data3) {
+						@RequestParam(defaultValue = "100") int data2,
+						@RequestParam(required = false) int [] data3) {
 		System.out.println("data1 : " + data1);
 		System.out.println("data2 : " + data2);
 		for(int a1 : data3) {
@@ -63,5 +65,31 @@ public class TestController {
 
 		return "result";
 	}
+
+    @GetMapping("/test5")
+    public String test5(@RequestParam Map<String, String> map) {
+        String data1 = map.get("data1");
+        String data2 = map.get("data2");
+        String data3 = map.get("data3");
+
+        System.out.printf("data1 : %s\n", data1);
+        System.out.printf("data2 : %s\n", data2);
+        System.out.printf("data3 : %s\n", data3);
+
+        return "result";
+    }
+
+
+    @GetMapping("/test6")
+    public String test6(@ModelAttribute Dto dto) {
+        System.out.printf("data1 : %d\n", dto.getData1());
+        System.out.printf("data2 : %d\n", dto.getData2());
+
+        for(int number1 : dto.getData3()) {
+            System.out.printf("data3 : %d\n", number1);
+        }
+
+        return "result";
+    }
 
 }

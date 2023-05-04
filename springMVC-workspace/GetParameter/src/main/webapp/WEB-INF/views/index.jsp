@@ -23,5 +23,9 @@
 
 	<hr/>
 	<a href='test4?data1=100&data2=200&data3=300&data3=400'>test4</a><br/>
+
+	<a href='test5?data1=100&data2=200&data3=300&data3=400'>test5 get</a><br/>
+
+	<a href='test6?data1=100&data2=200&data3=300&data3=400'>test6 get</a><br/>
 </body>
 </html>
