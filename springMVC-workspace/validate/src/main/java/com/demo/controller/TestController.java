@@ -14,13 +14,22 @@ import javax.validation.Valid;
 @Controller
 public class TestController {
 
-    @GetMapping("/test1")
-    public String test1() {
-        return "test1";
+
+    @GetMapping("/input_product")
+    public String input_product(Product product) {	//Product 빈 객체를 request 로 보냄
+        return "input_product";
     }
 
-    @GetMapping("/test2")
-    public String test2() {
-        return "test2";
+    @PostMapping("/input_product_proc")
+    public String input_product(@Valid Product product, BindingResult result) {
+
+
+        if(result.hasErrors()) {
+            return "input_product";
+        }
+
+        System.out.println(product.toString());
+
+        return "input_product_success";
     }
 }
