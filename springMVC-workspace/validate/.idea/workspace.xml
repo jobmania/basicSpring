@@ -9,48 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cdad58-cef8-4ee6-bb00-553e4e5165f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Interceptor/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/src/main/java/com/demo/config/RootAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/src/main/java/com/demo/config/ServletAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/src/main/java/com/demo/config/SpringConfigClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/src/main/java/com/demo/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/src/main/java/com/demo/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/src/main/java/com/demo/interceptor/TestInterceptor1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Interceptor/src/main/java/com/demo/model/Dto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/beans/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/beans/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/RootAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/ServletAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/SpringConfigClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/model/Dto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/properties/data1.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test1.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/image/spring-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Properties/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Properties/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="47cdad58-cef8-4ee6-bb00-553e4e5165f5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -102,6 +61,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "f9ab05454998236921a6b0e281fae632",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -209,6 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683515156509</updated>
       <workItem from="1683515157655" duration="7441000" />
+      <workItem from="1683526837872" duration="177000" />
     </task>
     <servers />
   </component>

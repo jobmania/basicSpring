@@ -14,7 +14,21 @@ public class TestController {
 
     @GetMapping("/test2")
     public String test2() {
+        System.out.println("test 2 request");
+
         return "test2";
+    }
+
+    @GetMapping("/sub1/test3")
+    public String test3() {
+        System.out.println("sub1/test3");
+        return "test3";
+    }
+
+    @GetMapping("/sub1/test4")
+    public String test4() {
+        System.out.println("sub1/test4");
+        return "test4";
     }
 
 

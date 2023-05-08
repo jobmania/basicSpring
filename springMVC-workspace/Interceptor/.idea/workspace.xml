@@ -10,51 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f80f78-189a-4533-9f44-52e51277ca3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/RootAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/ServletAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/SpringConfigClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/interceptor/TestInterceptor1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/model/Dto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/beans/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/beans/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/config/RootAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/config/ServletAppContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/config/SpringConfigClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/java/com/demo/model/Dto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/webapp/WEB-INF/properties/data1.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/webapp/WEB-INF/views/test1.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/webapp/WEB-INF/views/test2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validate/src/main/webapp/resources/image/spring-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Properties/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Properties/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test3.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test4.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../validate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../validate/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -89,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/admin/IdeaProjects/java/springMVC-workspace/Interceptor/src/main/webapp",
+    "last_opened_file_path": "C:/Users/admin/IdeaProjects/java/springMVC-workspace/Interceptor/src/main/webapp/WEB-INF/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -99,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\IdeaProjects\java\springMVC-workspace\Interceptor\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\admin\IdeaProjects\java\springMVC-workspace\Interceptor\src\main\webapp" />
       <recent name="C:\Users\admin\IdeaProjects\java\springMVC-workspace\Interceptor\src\main\java\com\demo" />
     </key>
@@ -199,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683525492798</updated>
-      <workItem from="1683525493906" duration="937000" />
+      <workItem from="1683525493906" duration="1262000" />
     </task>
     <servers />
   </component>

@@ -32,7 +32,12 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 		InterceptorRegistration reg1 = registry.addInterceptor(new TestInterceptor1());
 
-		reg1.addPathPatterns("/test1");
+
+		reg1.addPathPatterns("/*");
+		reg1.excludePathPatterns("/");
+
+		/// 다른 인터셉터 추가시
+		//	InterceptorRegistration reg2 = registry.addInterceptor(new TestInterceptor2());
 	}
 
 
