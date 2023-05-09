@@ -9,7 +9,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cdad58-cef8-4ee6-bb00-553e4e5165f5" name="Changes" comment="" />
+    <list default="true" id="47cdad58-cef8-4ee6-bb00-553e4e5165f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../HandelrException/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/java/com/demo/config/RootAppContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/java/com/demo/config/ServletAppContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/java/com/demo/config/SpringConfigClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/java/com/demo/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/java/com/demo/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/java/com/demo/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/webapp/WEB-INF/properties/data1.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/webapp/WEB-INF/views/error/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/webapp/WEB-INF/views/test1.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandelrException/src/main/webapp/resources/image/spring-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandleException/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandleException/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandleException/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandleException/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HandleException/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiniProject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiniProject/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiniProject/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiniProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiniProject/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Interceptor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Interceptor/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +90,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/admin/IdeaProjects/java/springMVC-workspace/validate/src/main/webapp/WEB-INF/views",
+    "last_opened_file_path": "C:/Users/admin/IdeaProjects/java/springMVC-workspace/validate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -170,6 +204,7 @@
       <updated>1683515156509</updated>
       <workItem from="1683515157655" duration="7441000" />
       <workItem from="1683526837872" duration="177000" />
+      <workItem from="1683611060790" duration="16000" />
     </task>
     <servers />
   </component>
