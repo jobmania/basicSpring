@@ -1,15 +1,14 @@
 package com.demo.controller;
 
+import com.demo.beans.LoginUserBean;
 import com.demo.beans.UserBean;
 import com.demo.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 
 @Controller
@@ -17,18 +16,40 @@ import javax.validation.Valid;
 public class UserController {
 
 	private UserService userService;
+	@Resource(name = "loginUserBean")
+	private LoginUserBean loginUserBean;
+
 
 	public UserController(UserService userService){
 		this.userService = userService;
 	}
 
 
-
 	@GetMapping("/login")
-	public String login() {
+	public String login(@ModelAttribute("loginBean") LoginUserBean loginBean,
+						Model model,
+						@RequestParam(value = "fail", defaultValue = "false") boolean fail) {
+		model.addAttribute("fail", fail);
 		return "user/login";
 	}
-	
+
+	@PostMapping("/login_pro")
+	public String login_pro(@Valid @ModelAttribute("loginBean")LoginUserBean loginBean, BindingResult result){
+		if (result.hasErrors()){
+			return "user/login";
+		}
+
+		userService.getLoginUserInfo(loginBean);
+
+		if(loginUserBean.isUserLogin() == true) {
+			return "user/login_success";
+		} else {
+			return "user/login_fail";
+		}
+
+
+	}
+
 	@GetMapping("/join")
 	public String join(@ModelAttribute("joinUserBean")UserBean joinUserBean) {
 		return "user/join";
@@ -48,8 +69,6 @@ public class UserController {
 		}
 
 		userService.addUserInfo(joinUserBean);
-
-
 		return "user/join_success";
 	}
 
