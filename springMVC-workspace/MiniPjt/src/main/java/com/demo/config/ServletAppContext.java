@@ -1,6 +1,8 @@
 package com.demo.config;
 
+import com.demo.mapper.BoardMapper;
 import com.demo.mapper.MapperInterface;
+import com.demo.mapper.MenuMapper;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -22,6 +24,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //스캔할 패키지를 지정한다.
 @ComponentScan("com.demo.controller")
 @PropertySource("/WEB-INF/properties/db.properties")
+@ComponentScan("com.demo.service")
 public class ServletAppContext implements WebMvcConfigurer {
 	
 	@Value("${db.classname}")
@@ -71,12 +74,30 @@ public class ServletAppContext implements WebMvcConfigurer {
 		return factory;
 	}
 	
-	// 쿼리문 실행을 위한 객체
+	// 쿼리문 실행을 위한 매퍼 객체
 	@Bean
 	public MapperFactoryBean<MapperInterface> test_mapper(SqlSessionFactory factory) throws Exception{
 		MapperFactoryBean<MapperInterface> factoryBean = new MapperFactoryBean<MapperInterface>(MapperInterface.class);
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
-	
+
+
+
+	// 쿼리문 실행을 위한 매퍼 객체
+	@Bean
+	public MapperFactoryBean<BoardMapper> getBoardMapper(SqlSessionFactory factory) throws Exception{
+		MapperFactoryBean<BoardMapper> factoryBean = new MapperFactoryBean<BoardMapper>(BoardMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+	@Bean
+	public MapperFactoryBean<MenuMapper> getMenuMapper(SqlSessionFactory factory) throws Exception{
+		MapperFactoryBean<MenuMapper> factoryBean = new MapperFactoryBean<MenuMapper>(MenuMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
+
 }
