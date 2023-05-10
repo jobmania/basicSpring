@@ -18,6 +18,8 @@ public class MenuInterceptor implements HandlerInterceptor {
         this.loginUserBean = loginUserBean;
     }
 
+
+    // 모든 요청시 db에서 메뉴데이터를 들고와 화면 view로 보내는 구성임.
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {

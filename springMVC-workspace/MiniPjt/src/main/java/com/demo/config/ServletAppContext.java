@@ -2,6 +2,7 @@ package com.demo.config;
 
 import com.demo.beans.BoardInfoBean;
 import com.demo.beans.LoginUserBean;
+import com.demo.interceptor.CheckLoginInterceptor;
 import com.demo.interceptor.MenuInterceptor;
 import com.demo.mapper.BoardMapper;
 import com.demo.mapper.MapperInterface;
@@ -125,8 +126,16 @@ public class ServletAppContext implements WebMvcConfigurer {
 		// 메뉴 서비스 목록의 경우 모든 요청에 대해서 필요함..
 		MenuInterceptor menuInterceptor = new MenuInterceptor(menuService,loginUserBean);
 		InterceptorRegistration reg1 = registry.addInterceptor(menuInterceptor);
-
 		reg1.addPathPatterns("/**"); //모든 요청
+
+		// 로그인 검사 로직 (비로그인사용자 차단수행)
+		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginUserBean);
+		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
+		// 차단하는 url
+		reg2.addPathPatterns("/user/modify", "/user/logout", "/board/*");
+		// 허용하는 url
+		reg2.excludePathPatterns("/board/main");
+
 	}
 
 }

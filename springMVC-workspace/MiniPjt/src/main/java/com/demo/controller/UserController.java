@@ -28,7 +28,8 @@ public class UserController {
 	@GetMapping("/login")
 	public String login(@ModelAttribute("loginBean") LoginUserBean loginBean,
 						Model model,
-						@RequestParam(value = "fail", defaultValue = "false") boolean fail) {
+						@RequestParam(defaultValue = "false") boolean fail) {
+		// true 시 fail 상태를 표시함!
 		model.addAttribute("fail", fail);
 		return "user/login";
 	}
@@ -48,6 +49,11 @@ public class UserController {
 		}
 
 
+	}
+
+	@GetMapping("/not_login")
+	public String not_login() {
+		return "user/not_login";
 	}
 
 	@GetMapping("/join")
