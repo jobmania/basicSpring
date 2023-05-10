@@ -1,6 +1,7 @@
 package com.demo.controller;
 
 import com.demo.beans.UserBean;
+import com.demo.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,6 +15,14 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+	private UserService userService;
+
+	public UserController(UserService userService){
+		this.userService = userService;
+	}
+
+
 
 	@GetMapping("/login")
 	public String login() {
@@ -34,10 +43,12 @@ public class UserController {
 		}
 
 		if(!joinUserBean.getUser_pw().equals(joinUserBean.getUser_pw2())) {
-
 			model.addAttribute("msg", "비밀번호가 같지 않습니다!");
 			return "user/join";
 		}
+
+		userService.addUserInfo(joinUserBean);
+
 
 		return "user/join_success";
 	}

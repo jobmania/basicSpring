@@ -1,5 +1,6 @@
 package com.demo.service;
 
+import com.demo.beans.UserBean;
 import com.demo.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,12 @@ public class UserService {
         } else {
             return false;
         }
+    }
+
+
+
+    public void addUserInfo(UserBean joinUserBean){
+        userMapper.addUserInfo(joinUserBean);
     }
 
 

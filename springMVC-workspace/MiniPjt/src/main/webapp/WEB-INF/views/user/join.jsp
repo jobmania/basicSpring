@@ -117,6 +117,8 @@
             }
           })
         }
+
+
         function resetUserIdExist(){
           $("#userIdChecked").val('false')
         }
