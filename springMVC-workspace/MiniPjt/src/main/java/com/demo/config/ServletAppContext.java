@@ -1,6 +1,7 @@
 package com.demo.config;
 
 import com.demo.beans.BoardInfoBean;
+import com.demo.beans.LoginUserBean;
 import com.demo.interceptor.MenuInterceptor;
 import com.demo.mapper.BoardMapper;
 import com.demo.mapper.MapperInterface;
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 //Spring MVC 관련된 설정을 하는 클래스
@@ -46,6 +48,13 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	@Autowired
 	private MenuService menuService;
+
+	@Resource(name = "loginUserBean")
+	private LoginUserBean loginUserBean;
+
+
+
+
 
 	// Controller의 메서드가 반환하는 jsp의 이름 앞뒤에 경로와 확장자를 붙혀주도록 설정한다.
 	@Override
@@ -114,7 +123,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
 		// 메뉴 서비스 목록의 경우 모든 요청에 대해서 필요함..
-		MenuInterceptor menuInterceptor = new MenuInterceptor(menuService);
+		MenuInterceptor menuInterceptor = new MenuInterceptor(menuService,loginUserBean);
 		InterceptorRegistration reg1 = registry.addInterceptor(menuInterceptor);
 
 		reg1.addPathPatterns("/**"); //모든 요청

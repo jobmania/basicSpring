@@ -41,7 +41,7 @@ public class UserController {
 
 		userService.getLoginUserInfo(loginBean);
 
-		if(loginUserBean.isUserLogin() == true) {
+		if(loginUserBean.isUserLogin()) {
 			return "user/login_success";
 		} else {
 			return "user/login_fail";
@@ -81,6 +81,7 @@ public class UserController {
 	
 	@GetMapping("/logout")
 	public String logout() {
+		loginUserBean.setUserLogin(false);
 		return "user/logout";
 	}
 }
