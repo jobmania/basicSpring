@@ -10,12 +10,9 @@ import java.util.List;
 @Service
 public class MenuService {
 
-
-    private final MenuMapper menuMapper;
     @Autowired
-    public MenuService(MenuMapper menuMapper){
-        this.menuMapper = menuMapper;
-    }
+    private  MenuMapper menuMapper;
+
 
     public List<BoardInfoBean> getMenuList(){
         List<BoardInfoBean> menuList = menuMapper.getMenuList();
