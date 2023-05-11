@@ -60,7 +60,6 @@ public class UserService {
     public void modifyUserInfo(UserBean modifyUserBean) {
 
         modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
-
         userMapper.modifyUserInfo(modifyUserBean);
     }
 
