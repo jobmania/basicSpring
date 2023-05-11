@@ -2,6 +2,7 @@ package com.demo.controller;
 
 import com.demo.beans.BoardInfoBean;
 import com.demo.beans.ContentBean;
+import com.demo.beans.LoginUserBean;
 import com.demo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -17,6 +19,9 @@ import java.util.List;
 public class BoardController {
 	private BoardService boardService;
 
+	@Resource(name = "loginUserBean")
+	private LoginUserBean loginUserBean;
+
 	@Autowired
 	public BoardController(BoardService boardService){
 		this.boardService = boardService;
@@ -24,6 +29,7 @@ public class BoardController {
 
 	@GetMapping("/main")
 	public String main(@RequestParam("board_info_idx") int board_info_idx, Model model) {
+
 		model.addAttribute("board_info_idx", board_info_idx);
 
 		String boardInfoName = boardService.getBoardInfoName(board_info_idx);
@@ -39,6 +45,8 @@ public class BoardController {
 	public String read(@RequestParam("board_info_idx") int board_info_idx,
 					   @RequestParam("content_idx") int content_idx, Model model) {
 		model.addAttribute("board_info_idx", board_info_idx);
+		model.addAttribute("content_idx", content_idx);
+		model.addAttribute("loginUserBean", loginUserBean);
 
 		ContentBean contentInfo = boardService.getContentInfo(content_idx);
 
@@ -64,6 +72,13 @@ public class BoardController {
 
 		return "board/write_success";
 	}
+
+	@GetMapping("/not_writer")
+	public String not_writer(){
+		return "board/not_writer";
+	}
+
+
 
 	@GetMapping("/modify")
 	public String modify() {

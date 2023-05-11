@@ -45,7 +45,7 @@ public class BoardService {
         return file_name;
     }
 
-
+    // 게시글 작성
     public void addContentInfo(ContentBean writeContentBean) {
 
         MultipartFile upload_file = writeContentBean.getUpload_file();
@@ -65,11 +65,13 @@ public class BoardService {
         return boardMapper.getBoardInfoName(board_info_idx);
     }
 
+    // 게시판별 게시글목록 보기
     public List<ContentBean> getContentList(int board_info_idx){
         return boardMapper.getContentList(board_info_idx);
     }
 
 
+    // 상세 게시글 보기
     public ContentBean getContentInfo(int content_idx) {
         return boardMapper.getContentInfo(content_idx);
     }

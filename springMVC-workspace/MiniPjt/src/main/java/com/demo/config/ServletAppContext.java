@@ -3,11 +3,13 @@ package com.demo.config;
 import com.demo.beans.BoardInfoBean;
 import com.demo.beans.LoginUserBean;
 import com.demo.interceptor.CheckLoginInterceptor;
+import com.demo.interceptor.CheckWriterInterceptor;
 import com.demo.interceptor.MenuInterceptor;
 import com.demo.mapper.BoardMapper;
 import com.demo.mapper.MapperInterface;
 import com.demo.mapper.MenuMapper;
 import com.demo.mapper.UserMapper;
+import com.demo.service.BoardService;
 import com.demo.service.MenuService;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -50,6 +52,9 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	@Autowired
 	private MenuService menuService;
+
+	@Autowired
+	private BoardService boardService;
 
 	// 로그인 정보 관리
 	@Resource(name = "loginUserBean")
@@ -137,6 +142,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 		reg2.addPathPatterns("/user/modify", "/user/logout", "/board/*");
 		// 허용하는 url
 		reg2.excludePathPatterns("/board/main","/board/read");
+
+
+		// 3. 로그인사용자별 수정 및 삭제 권한 추가
+		CheckWriterInterceptor checkWriterInterceptor = new CheckWriterInterceptor(loginUserBean, boardService);
+		InterceptorRegistration reg3 = registry.addInterceptor(checkWriterInterceptor);
+
+		// 허용
+		reg3.addPathPatterns("/board/modify", "/board/delete");
 
 	}
 

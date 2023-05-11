@@ -11,12 +11,12 @@ import javax.validation.constraints.Size;
 // 세션스코프(브라우저가 켜진동안 유지), 세션에 객체 loginUserBean등록...
 public class LoginUserBean {
 
-    private int user_idx;
+    private int user_idx; // 고유키 id
     private String user_name;
 
     @Size(min=4, max=20, message = "id는 4~20, 영어숫자")
     @Pattern(regexp = "[a-zA-Z0-9]*")
-    private String user_id;
+    private String user_id;  // user Id
 
     @Size(min=4, max=20, message = "pw은  4~20, 영어숫자")
     @Pattern(regexp = "[a-zA-Z0-9]*")
