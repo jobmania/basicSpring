@@ -1,12 +1,17 @@
 package com.demo.service;
 
 import com.demo.beans.ContentBean;
+import com.demo.beans.LoginUserBean;
+import com.demo.mapper.BoardMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.File;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -16,6 +21,11 @@ public class BoardService {
     @Value("${path.upload}")
     private String path_upload;
 
+    @Autowired
+    private BoardMapper boardMapper;
+
+    @Resource(name = "loginUserBean")
+    private LoginUserBean loginUserBean;
 
 
     //서버로 업로드 된 파일을 업로드 폴더에 저장하고 파일의 이름을 리턴하는 메소드
@@ -36,8 +46,6 @@ public class BoardService {
     }
 
 
-
-
     public void addContentInfo(ContentBean writeContentBean) {
 
         MultipartFile upload_file = writeContentBean.getUpload_file();
@@ -46,5 +54,24 @@ public class BoardService {
             String file_name = saveUploadFile(upload_file);
             writeContentBean.setContent_file(file_name);
         }
+
+        writeContentBean.setContent_writer_idx(loginUserBean.getUser_idx());
+        boardMapper.addContentInfo(writeContentBean);
+
     }
+
+
+    public String getBoardInfoName(int board_info_idx) {
+        return boardMapper.getBoardInfoName(board_info_idx);
+    }
+
+    public List<ContentBean> getContentList(int board_info_idx){
+        return boardMapper.getContentList(board_info_idx);
+    }
+
+
+    public ContentBean getContentInfo(int content_idx) {
+        return boardMapper.getContentInfo(content_idx);
+    }
+
 }

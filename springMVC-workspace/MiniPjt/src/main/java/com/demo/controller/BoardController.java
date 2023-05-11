@@ -25,11 +25,25 @@ public class BoardController {
 	@GetMapping("/main")
 	public String main(@RequestParam("board_info_idx") int board_info_idx, Model model) {
 		model.addAttribute("board_info_idx", board_info_idx);
+
+		String boardInfoName = boardService.getBoardInfoName(board_info_idx);
+		model.addAttribute("boardInfoName", boardInfoName);
+
+		List<ContentBean> contentList = boardService.getContentList(board_info_idx);
+		model.addAttribute("contentList", contentList);
+
 		return "board/main";
 	}
 
 	@GetMapping("/read")
-	public String read() {
+	public String read(@RequestParam("board_info_idx") int board_info_idx,
+					   @RequestParam("content_idx") int content_idx, Model model) {
+		model.addAttribute("board_info_idx", board_info_idx);
+
+		ContentBean contentInfo = boardService.getContentInfo(content_idx);
+
+		model.addAttribute("readContentBean", contentInfo);
+
 		return "board/read";
 	}
 

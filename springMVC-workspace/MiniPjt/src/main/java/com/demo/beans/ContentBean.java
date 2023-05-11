@@ -6,17 +6,19 @@ import javax.validation.constraints.NotBlank;
 
 public class ContentBean {
 
-    private int content_idx;
+    private int content_idx; // 게시글 id
     @NotBlank(message = "제목을 입력해주세요")
     private String content_subject;
     @NotBlank(message = "내용을 입력해주세요")
     private String content_text;
     private String content_file;  //파일의 이름을 넣을 문자열 변수
-    private int content_writer_idx; // 글쓴이
+    private int content_writer_idx; // 글쓴이 ID
     private int content_board_idx; // 게시판 종류
     private String content_date;
 
     private MultipartFile upload_file;  //업로드 한 파일을 담을 객체 추가하기
+    private String content_writer_name; // 글쓴이 이름
+
 
 
 
@@ -83,5 +85,13 @@ public class ContentBean {
 
     public void setUpload_file(MultipartFile upload_file) {
         this.upload_file = upload_file;
+    }
+
+    public String getContent_writer_name() {
+        return content_writer_name;
+    }
+
+    public void setContent_writer_name(String content_writer_name) {
+        this.content_writer_name = content_writer_name;
     }
 }

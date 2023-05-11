@@ -136,7 +136,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 		// 차단하는 url
 		reg2.addPathPatterns("/user/modify", "/user/logout", "/board/*");
 		// 허용하는 url
-		reg2.excludePathPatterns("/board/main");
+		reg2.excludePathPatterns("/board/main","/board/read");
 
 	}
 
