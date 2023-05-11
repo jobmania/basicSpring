@@ -4,6 +4,7 @@ import com.demo.beans.LoginUserBean;
 import com.demo.beans.UserBean;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 public interface UserMapper {
 
@@ -22,5 +23,12 @@ public interface UserMapper {
             "where user_id=#{user_id} and user_pw=#{user_pw}")
     LoginUserBean getLoginUserInfo(LoginUserBean loginBean);
 
+    @Select("select user_id, user_name from user_table where user_idx = #{user_idx}")
+    UserBean getModifyUserInfo(int user_idx);
+
+    @Update("update user_table " +
+            "set user_pw = #{user_pw} " +
+            "where user_idx = #{user_idx}")
+    void modifyUserInfo(UserBean modifyUserBean);
 
 }

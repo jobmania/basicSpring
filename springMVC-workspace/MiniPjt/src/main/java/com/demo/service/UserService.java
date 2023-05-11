@@ -15,6 +15,7 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
+    /// 현재 로그인 상태 저장 빈(세션스코프빈)
     @Resource(name = "loginUserBean")
     private LoginUserBean loginUserBean;
 
@@ -47,6 +48,20 @@ public class UserService {
     }
 
 
+    public void getModifyUserInfo(UserBean modifyUserBean) {
+        UserBean temp = userMapper.getModifyUserInfo(loginUserBean.getUser_idx());
 
+        // 수정할 대상을 modifyUserBean save한다.
+        modifyUserBean.setUser_id(temp.getUser_id());
+        modifyUserBean.setUser_name(temp.getUser_name());
+        modifyUserBean.setUser_idx(temp.getUser_idx());
+    }
+
+    public void modifyUserInfo(UserBean modifyUserBean) {
+
+        modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
+
+        userMapper.modifyUserInfo(modifyUserBean);
+    }
 
 }

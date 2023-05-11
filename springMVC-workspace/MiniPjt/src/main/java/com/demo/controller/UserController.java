@@ -63,7 +63,7 @@ public class UserController {
 
 	@PostMapping("/join_pro")
 	// @Valid를 붙여주면 유효성 검증이 진행된다.
-	//  에러시 에러메세지와 다시 원래 페이지로 되돌아감
+	//  에러시 에러메세지와 다시 원래(이전) 페이지로 되돌아감
 	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, BindingResult result, Model model) {
 		if(result.hasErrors()) {
 			return "user/join";
@@ -81,10 +81,30 @@ public class UserController {
 
 	
 	@GetMapping("/modify")
-	public String modify() {
+	public String modify(@ModelAttribute("modifyUserBean") UserBean modifyUserBean) {
+
+		userService.getModifyUserInfo(modifyUserBean);
+
 		return "user/modify";
 	}
-	
+
+
+	@PostMapping("/modify_pro")
+	public String modify_pro(@Valid @ModelAttribute("modifyUserBean") UserBean modifyUserBean,
+							 BindingResult result, Model model){
+		if(result.hasErrors()) {
+			return "user/modify";
+		}
+		if(!modifyUserBean.getUser_pw().equals(modifyUserBean.getUser_pw2())) {
+			model.addAttribute("msg", "비밀번호가 같지 않습니다!");
+			return "user/modify";
+		}
+
+		//DB에 수정된 비밀번호 저장하기
+		userService.modifyUserInfo(modifyUserBean);
+		return "user/modify_success";
+	}
+
 	@GetMapping("/logout")
 	public String logout() {
 		loginUserBean.setUserLogin(false);

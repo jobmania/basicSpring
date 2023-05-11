@@ -50,6 +50,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 	@Autowired
 	private MenuService menuService;
 
+	// 로그인 정보 관리
 	@Resource(name = "loginUserBean")
 	private LoginUserBean loginUserBean;
 
@@ -123,12 +124,12 @@ public class ServletAppContext implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
-		// 메뉴 서비스 목록의 경우 모든 요청에 대해서 필요함..
+		// 1.  메뉴 서비스 목록의 경우 모든 요청에 대해서 필요함..
 		MenuInterceptor menuInterceptor = new MenuInterceptor(menuService,loginUserBean);
 		InterceptorRegistration reg1 = registry.addInterceptor(menuInterceptor);
 		reg1.addPathPatterns("/**"); //모든 요청
 
-		// 로그인 검사 로직 (비로그인사용자 차단수행)
+		// 2. 로그인 검사 로직 (비로그인사용자 차단수행)
 		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginUserBean);
 		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
 		// 차단하는 url

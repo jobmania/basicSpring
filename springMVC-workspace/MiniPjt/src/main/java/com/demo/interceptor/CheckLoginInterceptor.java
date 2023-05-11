@@ -17,7 +17,7 @@ public class CheckLoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        if(!loginUserBean.isUserLogin()){
+        if(!loginUserBean.isUserLogin()){ // 비로그인 접근
             String contexPath = request.getContextPath();
             response.sendRedirect(contexPath + "/user/not_login");
             return false;
