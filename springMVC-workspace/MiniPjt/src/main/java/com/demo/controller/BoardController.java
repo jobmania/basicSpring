@@ -3,6 +3,7 @@ package com.demo.controller;
 import com.demo.beans.BoardInfoBean;
 import com.demo.beans.ContentBean;
 import com.demo.beans.LoginUserBean;
+import com.demo.beans.PageBean;
 import com.demo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,15 +29,20 @@ public class BoardController {
 	}
 
 	@GetMapping("/main")
-	public String main(@RequestParam("board_info_idx") int board_info_idx, Model model) {
+	public String main(@RequestParam("board_info_idx") int board_info_idx, Model model,
+						@RequestParam(value = "page", defaultValue = "1") int page) {
 
 		model.addAttribute("board_info_idx", board_info_idx);
 
 		String boardInfoName = boardService.getBoardInfoName(board_info_idx);
 		model.addAttribute("boardInfoName", boardInfoName);
 
-		List<ContentBean> contentList = boardService.getContentList(board_info_idx);
+		List<ContentBean> contentList = boardService.getContentList(board_info_idx, page);
 		model.addAttribute("contentList", contentList);
+
+		PageBean pageBean = boardService.getContentCnt(board_info_idx, page);
+		model.addAttribute("pageBean", pageBean);
+
 
 		return "board/main";
 	}
@@ -108,7 +114,12 @@ public class BoardController {
 	}
 
 	@GetMapping("/delete")
-	public String delete() {
+	public String delete(@RequestParam("board_info_idx")int board_info_idx,
+						 @RequestParam("content_idx")int content_idx, Model model) {
+
+		boardService.deleteContentInfo(content_idx);
+		model.addAttribute("board_info_idx", board_info_idx);
+
 		return "board/delete";
 	}
 
