@@ -60,7 +60,7 @@ public class BoardService {
 
     }
 
-
+    // 제목들고오기
     public String getBoardInfoName(int board_info_idx) {
         return boardMapper.getBoardInfoName(board_info_idx);
     }
@@ -75,5 +75,31 @@ public class BoardService {
     public ContentBean getContentInfo(int content_idx) {
         return boardMapper.getContentInfo(content_idx);
     }
+
+
+    //글 인덱스 번호로 검색해서 글 정보를 modifyContentBean 입력한다.
+    public void getContents(ContentBean modifyContentBean) {
+
+        ContentBean temp = boardMapper.getContentInfo(modifyContentBean.getContent_idx());
+        // 수정 가능한 목록
+        modifyContentBean.setContent_writer_name(temp.getContent_writer_name());
+        modifyContentBean.setContent_date(temp.getContent_date());
+        modifyContentBean.setContent_subject(temp.getContent_subject());
+        modifyContentBean.setContent_text(temp.getContent_text());
+        modifyContentBean.setContent_file(temp.getContent_file());
+    }
+
+    public void modifyContentInfo(ContentBean modifyContentBean) {
+
+        MultipartFile upload_file = modifyContentBean.getUpload_file();
+
+        if(upload_file.getSize() > 0) {
+            String file_name = saveUploadFile(upload_file);
+            modifyContentBean.setContent_file(file_name);
+        }
+
+        boardMapper.modifyContentInfo(modifyContentBean);
+    }
+
 
 }

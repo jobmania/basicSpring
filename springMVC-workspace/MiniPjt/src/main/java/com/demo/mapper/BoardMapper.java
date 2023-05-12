@@ -4,6 +4,7 @@ import com.demo.beans.ContentBean;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -13,7 +14,8 @@ public interface BoardMapper {
     //    마이바티스에서 제공하는 @SelectKey를 사용해 미리 시퀀스를 사용해 게시글번호를 wirteContentBean에 입력하면서 Insert 쿼리문을 실행한다.
     //content_idx 값이 나오면 먼저(before) sql문을 실행 결과를 입력한다.
     // values 값에 content_seq.nextval 대신에 #{content_idx}를 넣는다.
-    @SelectKey(statement = "select content_seq.nextval from dual", keyProperty = "content_idx", before = true, resultType = int.class)
+    @SelectKey(statement = "select content_seq.nextval from dual",
+                keyProperty = "content_idx", before = true, resultType = int.class)
     @Insert("insert into content_table(content_idx, content_subject, content_text, " +
             "content_file, content_writer_idx, content_board_idx, content_date) " +
             "values (#{content_idx}, #{content_subject}, #{content_text}, #{content_file, jdbcType=VARCHAR}, " +
@@ -41,5 +43,9 @@ public interface BoardMapper {
             "and content_idx = #{ content_idx }")
     ContentBean getContentInfo(int content_idx);
 
-
+    @Update("update content_table " +
+            "set content_subject = #{content_subject}, content_text = #{content_text}, " +
+            "content_file = #{content_file, jdbcType=VARCHAR} " +
+            "where content_idx = #{content_idx}")
+    void modifyContentInfo(ContentBean modifyContentBean);
 }
