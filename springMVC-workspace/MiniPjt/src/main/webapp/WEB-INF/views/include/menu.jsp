@@ -5,7 +5,7 @@
 <!-- 상단 메뉴 부분 -->
 <nav
 	class="navbar navbar-expand-md bg-dark navbar-dark fixed-top shadow-lg">
-	<a class="navbar-brand" href="${root}">🚀busanIT</a>
+	<a class="navbar-brand" href="${root}">🎶Spring + Mybatis</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navMenu">
 		<span class="navbar-toggler-icon"></span>

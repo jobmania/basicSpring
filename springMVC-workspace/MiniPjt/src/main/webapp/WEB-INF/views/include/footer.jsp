@@ -5,7 +5,7 @@
 <div class="container-fluid bg-dark text-white"
 	style="margin-top: 50px; padding-top: 30px; padding-bottom: 30px">
 	<div class="container">
-		<p>http://www.🚀busanIT.co.kr</p>
+		<p>Spring, MyBatis, OracleDB, JSP, JAVA_11</p>
 		<p>게시판 예제</p>
 		<p>사업자번호 : 000-111-222</p>
 	</div>

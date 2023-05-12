@@ -14,6 +14,7 @@ public class HomeController {
 //		System.out.println(request.getServletContext().getRealPath("/"));
 
 
-		return "index";
+		return "redirect:/main";
+
 	}
 }

@@ -1,12 +1,10 @@
 package com.demo.config;
 
-import com.demo.beans.BoardInfoBean;
 import com.demo.beans.LoginUserBean;
 import com.demo.interceptor.CheckLoginInterceptor;
 import com.demo.interceptor.CheckWriterInterceptor;
 import com.demo.interceptor.MenuInterceptor;
 import com.demo.mapper.BoardMapper;
-import com.demo.mapper.MapperInterface;
 import com.demo.mapper.MenuMapper;
 import com.demo.mapper.UserMapper;
 import com.demo.service.BoardService;
@@ -25,7 +23,6 @@ import org.springframework.web.multipart.support.StandardServletMultipartResolve
 import org.springframework.web.servlet.config.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 //Spring MVC 관련된 설정을 하는 클래스
 @Configuration

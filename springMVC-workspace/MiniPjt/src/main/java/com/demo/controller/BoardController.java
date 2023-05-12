@@ -40,8 +40,12 @@ public class BoardController {
 		List<ContentBean> contentList = boardService.getContentList(board_info_idx, page);
 		model.addAttribute("contentList", contentList);
 
-		PageBean pageBean = boardService.getContentCnt(board_info_idx, page);
+		PageBean pageBean = boardService.
+
+				getContentCnt(board_info_idx, page);
 		model.addAttribute("pageBean", pageBean);
+		model.addAttribute("page", page);
+
 
 
 		return "board/main";
@@ -49,7 +53,9 @@ public class BoardController {
 
 	@GetMapping("/read")
 	public String read(@RequestParam("board_info_idx") int board_info_idx,
-					   @RequestParam("content_idx") int content_idx, Model model) {
+					   @RequestParam("content_idx") int content_idx,
+					   @RequestParam(value = "page", defaultValue = "1") int page,
+					   Model model) {
 		model.addAttribute("board_info_idx", board_info_idx);
 		model.addAttribute("content_idx", content_idx);
 		model.addAttribute("loginUserBean", loginUserBean);
@@ -57,6 +63,7 @@ public class BoardController {
 		ContentBean contentInfo = boardService.getContentInfo(content_idx);
 
 		model.addAttribute("readContentBean", contentInfo);
+		model.addAttribute("page", page);
 
 		return "board/read";
 	}
@@ -90,6 +97,7 @@ public class BoardController {
 	public String modify(@RequestParam("board_info_idx")int board_info_idx,
 						 @RequestParam("content_idx")int content_idx,
 						 @ModelAttribute("modifyContentBean") ContentBean modifyContentBean,
+						 @RequestParam("page") int page,
 						 Model model) {
 
 		modifyContentBean.setContent_board_idx(board_info_idx);
@@ -97,13 +105,17 @@ public class BoardController {
 
 		boardService.getContents(modifyContentBean);
 		model.addAttribute("modifyContentBean", modifyContentBean);
+		model.addAttribute("page", page);
+
 		return "board/modify";
 	}
 
 	@PostMapping("/modify_pro")
 	public String modify_pro(@Valid @ModelAttribute("modifyContentBean") ContentBean modifyContentBean,
-							 BindingResult result) {
-
+							 BindingResult result,
+							 @RequestParam("page") int page,
+							 Model model) {
+		model.addAttribute("page", page);
 		if(result.hasErrors()) {
 			return "board/modify";
 		}
