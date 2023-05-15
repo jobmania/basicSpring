@@ -23,7 +23,7 @@
 - 이미지 파일 크기 및 기타 설정
 
 # beans 
-- 데이터베이스의 값을 주입 받는 bean의 필드 네임은 db의 컬럼명과 동일 해야한다 (만약 다르다면 https://hayden-archive.tistory.com/326 방법의 예시로 AS 를 사용하거나 <resultMap> 사용해서 Mapping)
+- 데이터베이스의 값을 주입 받는 bean의 필드 네임은 db의 컬럼명과 동일 해야한다 (만약 다르다면 [방법](https://hayden-archive.tistory.com/326)의 예시로 AS 를 사용하거나 <resultMap> 사용해서 Mapping)
 - @Vaild를 활용해서 유효성 검사하기 위한 설정 및 Error 메세지 설정.
   
  ## 1. UserBean
@@ -62,9 +62,9 @@
 # mapper [Mybatis 정보](https://jung-story.tistory.com/128) 
  ![image](https://github.com/jobmania/basicToJavaAndSpring/assets/108961843/7af3565a-65f9-45d3-87ee-b7f650135f1f)
 - jdbc로 처리하는 코드의 설정(Connection) 부분을 줄이고 실제 sql문에 연결함으로서 빠른 개발이 가능하게 한다.
-## BoardMapper
+## 1. BoardMapper
  - 게시글 CRUD
-## MenuMapper
+## 2. MenuMapper
  - 메뉴 항목 READ
-## UserMapper
+## 3. UserMapper
  - 유저 정보 CRUD
