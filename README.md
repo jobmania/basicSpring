@@ -1,6 +1,7 @@
 # basicToJavaAndSpring
 
 ## Spring boot 없이 SPRING Framework으로 게시판 만들기
+![전체 코드 ](https://github.com/jobmania/basicToJavaAndSpring/tree/master/springMVC-workspace/MiniPjt)
 - Tomcat Local Server,
 - Mybatis
 - JAVA 11
