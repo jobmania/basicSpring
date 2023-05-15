@@ -45,6 +45,7 @@
 
  
 # Interceptor
+ ![image](https://github.com/jobmania/basicToJavaAndSpring/assets/108961843/cb0f1e7a-b292-4d8c-ad07-ed6fdb6177ab)
 - Controller로 들어오는 모든 요청에 대해서 로직을 수행하지 않고 통과하는 url과 로직을 수행하는 url을 설정 가능.
 - 해당 로직에 실패시 false를 return. 
  ## 1. CheckLoginInterceptor
@@ -68,3 +69,5 @@
  - 메뉴 항목 READ
 ## 3. UserMapper
  - 유저 정보 CRUD
+ 
+
