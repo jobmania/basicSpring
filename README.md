@@ -12,13 +12,13 @@
 
 
 # Config
-## ServletAppConfig
+- ## ServletAppConfig
 - 스캔할 컴포넌트 설정 , 데이터베이스 접속관리, 쿼리접속객체 관리
 - 인터셉터 기능 사용시 인터셉터 추가 설정
 - 이미지 업로드 관련 설정
 - ViewResolver 설정, 정적파일 경로 매핑
 
-## SpringConfigClass
+- ## SpringConfigClass
 - 파라미터 인코딩 설정
 - 이미지 파일 크기 및 기타 설정
 
