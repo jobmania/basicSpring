@@ -11,6 +11,9 @@
 ![image](https://github.com/jobmania/basicToJavaAndSpring/assets/108961843/3f9a00af-afa1-4250-92bc-8cb20c761198)
 
 
+각 기능 설명
+-------------------------
+
 # Config
  ## 1. ServletAppConfig
 - 스캔할 컴포넌트 설정 , 데이터베이스 접속관리, 쿼리접속객체 관리
@@ -70,4 +73,8 @@
 ## 3. UserMapper
  - 유저 정보 CRUD
  
+ 
+ --------------
+ 
+ + 중복확인 : Ajax 기반 통신
 
