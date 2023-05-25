@@ -31,8 +31,13 @@ public class BoardService {
 
 
 
+//    @Autowired
+    private final BoardMapper boardMapper;
+
     @Autowired
-    private BoardMapper boardMapper;
+    public BoardService(BoardMapper boardMapper) {
+        this.boardMapper = boardMapper;
+    }
 
     @Resource(name = "loginUserBean")
     private LoginUserBean loginUserBean;
@@ -66,7 +71,10 @@ public class BoardService {
         }
 
         writeContentBean.setContent_writer_idx(loginUserBean.getUser_idx());
-        boardMapper.addContentInfo(writeContentBean);
+        for (int i = 0; i < 100; i++) {
+            boardMapper.addContentInfo(writeContentBean);
+
+        }
 
     }
 

@@ -1,5 +1,6 @@
 package com.demo.config;
 
+import com.demo.beans.BoardInfoBean;
 import com.demo.beans.LoginUserBean;
 import com.demo.interceptor.CheckLoginInterceptor;
 import com.demo.interceptor.CheckWriterInterceptor;
@@ -15,10 +16,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.*;
 
@@ -47,19 +45,30 @@ public class ServletAppContext implements WebMvcConfigurer {
 	@Value("${db.password}")
 	private String db_password;
 
-	@Autowired
-	private MenuService menuService;
 
-	@Autowired
-	private BoardService boardService;
+
+
 
 	// 로그인 정보 관리
 	@Resource(name = "loginUserBean")
 	private LoginUserBean loginUserBean;
 
+	@Autowired
+	private  MenuService menuService;
+
+	@Autowired
+	private BoardService boardService;
 
 
-
+//	private final MenuService menuService;
+//
+//	private final BoardService boardService;
+//
+//	@Autowired
+//	public ServletAppContext(MenuService menuService, BoardService boardService) {
+//		this.menuService = menuService;
+//		this.boardService = boardService;
+//	}
 
 	// Controller의 메서드가 반환하는 jsp의 이름 앞뒤에 경로와 확장자를 붙혀주도록 설정한다.
 	@Override

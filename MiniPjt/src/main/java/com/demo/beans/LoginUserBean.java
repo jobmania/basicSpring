@@ -16,7 +16,7 @@ public class LoginUserBean {
 
     @Size(min=4, max=20, message = "id는 4~20, 영어숫자")
     @Pattern(regexp = "[a-zA-Z0-9]*")
-    private String user_id;  // user Id
+    private String user_id;  // user I
 
     @Size(min=4, max=20, message = "pw은  4~20, 영어숫자")
     @Pattern(regexp = "[a-zA-Z0-9]*")
