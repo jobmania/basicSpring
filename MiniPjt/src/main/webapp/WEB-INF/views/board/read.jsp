@@ -77,7 +77,7 @@
                     <c:if test="${readContentBean.content_file != null }">
                         <div class="form-group">
                             <label >첨부 이미지</label>
-                            <img src="${root }upload/${readContentBean.content_file}" width="100%" />
+                            <img src="${root}upload/${readContentBean.content_file}" width="100%" />
                         </div>
                     </c:if>
 
